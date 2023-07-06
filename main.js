@@ -8,20 +8,19 @@ const rock_div = document.getElementById("r");
 const paper_div = document.getElementById("p");
 const scissors_div = document.getElementById("s");
 
-
+//////////////////////
 function getComputerChoice() {
     const choices = ["r", "p", "s"];
     const randomNUmber = (Math.floor(Math.random() * 3));
     return choices [randomNUmber];
-
 }
 
-console.log(getComputerChoice());
-
-
+//////////////////////
 
 function game(userChoice) {
-
+    const computerChoice = getComputerChoice();
+    console.log("user choice => " + userChoice);
+    console.log("compuer choice => " + computerChoice);
 
 }
 
