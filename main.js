@@ -12,15 +12,31 @@ const scissors_div = document.getElementById("s");
 function getComputerChoice() {
     const choices = ["r", "p", "s"];
     const randomNUmber = (Math.floor(Math.random() * 3));
-    return choices [randomNUmber];
+    return choices[randomNUmber];
 }
 
 //////////////////////
 
 function game(userChoice) {
     const computerChoice = getComputerChoice();
-    console.log("user choice => " + userChoice);
-    console.log("compuer choice => " + computerChoice);
+    switch (userChoice + computerChoice) {
+        case "rs":
+        case "pr":
+        case "sp":
+            console.log("USER WINS");
+            break;
+        case "rp":
+        case "ps":
+        case "sr":
+            console.log("USER LOSES");
+            break;
+        case "rr":
+        case "pp":
+        case "ss":
+            console.log("DRAW");
+            break;
+
+    }
 
 }
 
