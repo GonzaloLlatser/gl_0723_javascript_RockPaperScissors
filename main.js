@@ -28,21 +28,19 @@ function win(userChoice, computerChoice) {
     userScore++;
     userScore_span.innerHTML= userScore;
     computerScore_span.innerHTML =computerScore;
-    result_p.innerHTML = convertToWord(userChoice) + " beats " + convertToWord(computerChoice) + ". You win !"
+    result_p.innerHTML = convertToWord(userChoice) + " beats " + convertToWord(computerChoice) + ". You win !";
 }
 
 function lose(userChoice, computerChoice) {
     computerScore++;
     userScore_span.innerHTML= userScore;
     computerScore_span.innerHTML =computerScore;
-    result_p.innerHTML = convertToWord(userChoice) + " loses to " + convertToWord(computerChoice) + ". You lost!"
-
-
+    result_p.innerHTML = convertToWord(userChoice) + " loses to " + convertToWord(computerChoice) + ". You lost!";
 }
 
-function draw() {
-    console.log("DRAW");
-
+function draw(userChoice, computerChoice) {
+    computerScore_span.innerHTML =computerScore;
+    result_p.innerHTML = convertToWord(userChoice) + " equals " + convertToWord(computerChoice) + " . It's a draw.";
 }
 
 //////////////////////
